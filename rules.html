@@ -45,12 +45,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
+                <a class="nav-link" href="#" id="buttomJugar">Jugar</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="rules.html"
                   >Reglas</a
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -60,32 +60,26 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Dorso de la baraja
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item"> <img src="img/red.png" width="17" height="25"></img> Classic Red</a></li>
+                  <li><a class="dropdown-item"><img src="img/blue.png" width="17" height="25"></img> Classic Blue</a></li>
+                  <li><a class="dropdown-item"><img src="img/grey_back.png" width="17" height="25"></img> Modern Grey</a></li>
+                  <li><a class="dropdown-item"><img src="img/red_back.png" width="17" height="25"></img> Modern Red</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" id="buttomSelectBackCard">Seleccionar</a>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+
+            <!-- Aquí se agregará el nombre del jugador y el monto de fichas -->
+            <div class="navbar-nav ms-auto">
+              <span id="playerName" class="navbar-text me-3"></span>
+              <span id="playerChips" class="navbar-text"></span>
+            </div>
           </div>
         </div>
       </nav>

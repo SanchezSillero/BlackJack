@@ -25,18 +25,25 @@ class Card {
 }
 
 class Player {
-  name;
-  score;
-  hand;
-
   constructor() {
     this.name = prompt(`Introduzca su nombre`);
-    this.score = 0;
+    this.chips = 1000;
+    this.playerscore = 0;
     this.hand = [];
   }
 
   addCard(card) {
     this.hand.push(card);
     this.score += card.value;
+  }
+
+  bet(amount) {
+    if (amount <= this.chips) {
+      this.chips -= amount; // Restar el monto apostado de las fichas del jugador
+      return amount;
+    } else {
+      console.log("No tienes suficientes fichas para apostar esa cantidad.");
+      return 0;
+    }
   }
 }
