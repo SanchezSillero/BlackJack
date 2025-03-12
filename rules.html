@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+  </head>
+
+  <body class="bg-secondary text-white">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/header.png"
+              alt="Blacjack Logo"
+              width="50"
+              height="50"
+            />
+            Blacjack
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="rules.html"
+                  >Reglas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container p-5">
+        <h3>Objetivo del juego</h3>
+        <p>
+          El objetivo del blackjack es sencillo: cada jugador se enfrenta de
+          forma individual a la banca, en busca de conseguir 21 puntos, o el
+          número más cercano posible., sin pasarse. Para conseguirlos, cada
+          jugador recibe dos cartas al inicio.
+        </p>
+        <p>
+          Si las dos primeras cartas suman 21, es la mejor jugada posible, y
+          recibe el nombre de Blackjak. Cuando los jugadores no llegan a 21,
+          puede pedir cartas extra para llegar, pero si se pasa de los 21
+          automáticamente pierde.
+        </p>
+        <p>
+          La banca, que también es parte del juego, tiene sus propias reglas de
+          la casa en blackjack. Recibe dos cartas, y sus opciones son muy
+          claras:
+        </p>
+        <ul>
+          <li>Si tiene 16 o menos, está obligada a pedir otra carta.</li>
+          <li>Si tiene 17 o más se tiene que plantar.</li>
+        </ul>
+        <p>
+          La banca le gana a todos los jugadores que se pasen de 21, y a todos
+          aquellos que tengan una mano de menor valor que la suya. Si tiene 19
+          puntos, por ejemplo, le gana a todos los que tengan 18 o menos y 22 o
+          más.
+        </p>
+
+        <p>
+          Pierde con los jugadores que tengan una mano superior, y con todos los
+          que se hayan plantado en el caso de que exceda los 21 puntos. El
+          empate en blackjack, se da entre la banca y los jugadores que tengan
+          la misma cantidad de puntos.
+        </p>
+        <h3>Valor de las cartas en blackjack</h3>
+        <p>
+          En el blackjack las cartas tienen un valor propio. Si queremos jugar
+          cada vez mejor y sumar nuestros 21 puntos debemos conocer al pie de la
+          letra el valor que le corresponde a cada carta del mazo.
+        </p>
+        <p>El valor de las cartas en el blackjack es el siguiente:</p>
+        <ul>
+          <li>
+            El As es la única que tiene dos valores, 1 y 11. El jugador que
+            tiene el As puede elegir su valor según le convenga.
+          </li>
+          <li>
+            Las cartas del 1 al 10 están valuadas de acuerdo a su numeración.
+          </li>
+          <li>La jota, la reina y el rey comparten el valor de 10 puntos.</li>
+        </ul>
+      </div>
+    </main>
+    <script src="utils/js/objects.js"></script>
+    <script src="utils/js/game.js"></script>
+  </body>
+</html>
