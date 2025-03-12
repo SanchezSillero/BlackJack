@@ -5,16 +5,16 @@ for (let index = 0; index < suits.length; index++) {
   for (let i = 1; i <= 13; i++) {
     switch (i) {
       case 11:
-        deck.push(new card("J" + suits[index]));
+        deck.push(new Card("J" + suits[index]));
         break;
       case 12:
-        deck.push(new card("Q" + suits[index]));
+        deck.push(new Card("Q" + suits[index]));
         break;
       case 13:
-        deck.push(new card("K" + suits[index]));
+        deck.push(new Card("K" + suits[index]));
         break;
       default:
-        deck.push(new card(i + suits[index]));
+        deck.push(new Card(i + suits[index]));
         break;
     }
   }
@@ -25,8 +25,11 @@ deck = _.shuffle(deck);
 console.log(deck);
 
 //empieza el juego->
-//Turno del jugador
-let playerScore = 0;
+//se sacan dos cartas a la banca y a cada jugador
+//banca
+setInterval(() => {
+  console.log("Repartiendo...");
+}, 500);
 
 //la banca juega hasta que tenga 17 o mas
 let dealerScore = 0;
@@ -47,3 +50,5 @@ let interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 3000);
+//Turno del jugador
+let playerScore = 0;

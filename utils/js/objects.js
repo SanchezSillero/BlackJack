@@ -1,4 +1,4 @@
-class card {
+class Card {
   //atributo
   value;
   img;
@@ -22,4 +22,21 @@ class card {
   //metodos
 
   //getter/setter
+}
+
+class Player {
+  name;
+  score;
+  hand;
+
+  constructor() {
+    this.name = prompt(`Introduzca su nombre`);
+    this.score = 0;
+    this.hand = [];
+  }
+
+  addCard(card) {
+    this.hand.push(card);
+    this.score += card.value;
+  }
 }
