@@ -12,7 +12,7 @@ buttomJugar.addEventListener("click", (event) => {
 
   //Creamos la baraja
   let deck = [];
-  let suits = ["P", "C", "T", "R"];
+  let suits = ["P", "C", "T", "D"];
 
   for (let index = 0; index < suits.length; index++) {
     for (let i = 1; i <= 13; i++) {
@@ -33,22 +33,66 @@ buttomJugar.addEventListener("click", (event) => {
     }
   }
 
+  //empieza el juego->
   //Barajamos el deck
   deck = _.shuffle(deck);
   console.log(deck);
 
-  //empieza el juego->
-  //se sacan dos cartas a la banca y a cada jugador
+  //al pulsar repartir se sacan dos cartas a la banca y a cada jugador
+  let buttomRepartir = document.querySelector("#buttomRepartir");
+  buttomRepartir.addEventListener("click", (event) => {
+    // Reiniciamos las manos
+    dealerHand = [];
+    player.hand = [];
+    player.playerscore = 0;
+    dealerScore = 0;
+
+    // Robar dos cartas para el dealer
+    for (let i = 0; i < 2; i++) {
+      setTimeout(() => {
+        let card = deck.pop();
+        dealerHand.push(card);
+        dealerScore += card.value;
+
+        let cardImg = document.createElement("img");
+        cardImg.src = `${card.img}`; // Asegúrate de que la ruta de la imagen esté bien definida
+        cardImg.width = 70;
+        cardImg.classList.add("mx-1");
+
+        document.querySelector("#cardsDealer").appendChild(cardImg);
+        document.querySelector(
+          "#dealerScore"
+        ).textContent = `Puntuación: ${dealerScore}`;
+      }, i * 500); // Cada carta del dealer con 500ms de diferencia
+    }
+
+    // Robar dos cartas para el jugador
+    for (let i = 0; i < 2; i++) {
+      setTimeout(() => {
+        let card = deck.pop();
+        player.addCard(card);
+
+        let cardImg = document.createElement("img");
+        cardImg.src = `${card.img}`;
+        cardImg.width = 70;
+        cardImg.classList.add("mx-1");
+
+        document.querySelector("#cardsPlayer").appendChild(cardImg);
+        document.querySelector(
+          "#playerScore"
+        ).textContent = `Puntuación: ${player.playerScore}`;
+      }, i * 500); // Cada carta del jugador con 500ms de diferencia
+    }
+  });
   //banca
 
   //la banca juega hasta que tenga 17 o mas
-  let dealerScore = 0;
 
   /* while (dealerScore < 17) {
   dealerScore += deck.pop().value;
 } */
 
-  let interval = setInterval(() => {
+  /* let interval = setInterval(() => {
     console.log("Sacando carta...");
     if (dealerScore < 17) {
       let card = deck.pop();
@@ -61,5 +105,5 @@ buttomJugar.addEventListener("click", (event) => {
     }
   }, 3000);
   //Turno del jugador
-  let playerScore = 0;
+  let playerScore = 0; */
 });

@@ -27,14 +27,14 @@ class Card {
 class Player {
   constructor() {
     this.name = prompt(`Introduzca su nombre`);
-    this.chips = 1000;
-    this.playerscore = 0;
+    this.chips = 5000;
+    this.playerScore = 0;
     this.hand = [];
   }
 
   addCard(card) {
     this.hand.push(card);
-    this.score += card.value;
+    this.playerScore += card.value;
   }
 
   bet(amount) {

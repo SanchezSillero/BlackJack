@@ -20,7 +20,7 @@
 
   <body class="bg-secondary text-white">
     <header>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg bg-light px-5">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img
@@ -47,11 +47,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#" id="buttomJugar">Jugar</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="rules.html"
-                  >Reglas</a
-                >
-              </li>
+
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -63,22 +59,43 @@
                   Dorso de la baraja
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item"> <img src="img/red.png" width="17" height="25"></img> Classic Red</a></li>
-                  <li><a class="dropdown-item"><img src="img/blue.png" width="17" height="25"></img> Classic Blue</a></li>
-                  <li><a class="dropdown-item"><img src="img/grey_back.png" width="17" height="25"></img> Modern Grey</a></li>
-                  <li><a class="dropdown-item"><img src="img/red_back.png" width="17" height="25"></img> Modern Red</a></li>
-                  <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" id="buttomSelectBackCard">Seleccionar</a>
+                    <a class="dropdown-item" id="dorso1">
+                      <img src="img/red.png" width="17" height="25" /> Classic
+                      Red</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" id="dorso2"
+                      ><img src="img/blue.png" width="17" height="25" /> Classic
+                      Blue</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" id="dorso3"
+                      ><img src="img/grey_back.png" width="17" height="25" />
+                      Modern Grey</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" id="dorso4"
+                      ><img src="img/red_back.png" width="17" height="25" />
+                      Modern Red</a
+                    >
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="rules.html"
+                  >Reglas</a
+                >
               </li>
             </ul>
 
             <!-- Aquí se agregará el nombre del jugador y el monto de fichas -->
             <div class="navbar-nav ms-auto">
               <span id="playerName" class="navbar-text me-3"></span>
-              <span id="playerChips" class="navbar-text"></span>
+              <span id="playerChips" class="navbar-text"> </span>
             </div>
           </div>
         </div>

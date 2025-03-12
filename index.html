@@ -109,20 +109,46 @@
           <div class="col-12 bg-secondary p-3" style="height: 50%">
             <div class="row">
               <div class="col-3">
-                <h3>Dealer</h3>
-                <img src="img/red.png" width="70" />
+                <!-- Contenedor para la imagen y el botón, asegurándonos de que estén en la misma columna -->
+                <div class="d-flex flex-column align-items-center">
+                  <img src="img/red.png" width="90" />
+                  <button
+                    type="button"
+                    class="btn btn-warning mt-3"
+                    id="buttomRepartir"
+                  >
+                    Repartir
+                  </button>
+                </div>
               </div>
-              <div class="col-6"></div>
-              <div class="col-3"><p>Puntuación:</p></div>
+              <div class="col-6" id="cardsDealer"><h3>Dealer</h3></div>
+              <div class="col-3" id="dealerScore"><p>Puntuación:</p></div>
             </div>
           </div>
           <!-- Parte inferior: Jugador -->
           <div class="col-12 bg-dark text-white p-3" style="height: 50%">
-            <h3>Jugador</h3>
-            <p>
-              Contenido relacionado con el jugador (nombre, fichas, puntaje,
-              etc.)
-            </p>
+            <div class="row">
+              <div class="col-3">
+                <div class="d-flex flex-column align-items-center">
+                  <button
+                    type="button"
+                    class="btn btn-warning mt-3"
+                    id="buttomPedirCarta"
+                  >
+                    Pedir Carta
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-warning mt-3"
+                    id="buttomPlantarse"
+                  >
+                    Plantarse
+                  </button>
+                </div>
+              </div>
+              <div class="col-6" id="cardsPlayer"><h3>Jugador</h3></div>
+              <div class="col-3" id="playerScore"><p>Puntuación:</p></div>
+            </div>
           </div>
         </div>
       </div>
